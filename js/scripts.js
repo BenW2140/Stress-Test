@@ -18,16 +18,13 @@ $(document).ready(function() {
 
     if (stressSignsCount >= 2) {
       if (healthSymptomsCount >= 2) {
-        
+        $("div.response").text("You are really unhealthy! Seek immediate assistance!");
       } else {
-
+        $("div.response").text("You are stressed, but not in immediate danger!");
       }
     } else {
-
+      $("div.response").text("You're killin' it Slayer!");
     }
-
-    console.log(`Stress Signs Count: ${stressSignsCount}`);
-    console.log(`Health Symptoms Count ${healthSymptomsCount}`);
-    console.log(`Coping Count: ${copingCount}`);
+    $("div.response").show();
   });
 });
